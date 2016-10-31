@@ -5,6 +5,9 @@ Usage:
 
 use this image as a base image for your php application
 
+```
+FROM ackee/composer-apache-base
+
 # install app
 WORKDIR /var/www/
 COPY . /var/www/
@@ -18,4 +21,4 @@ RUN chown -R www-data:www-data /var/www/ && \
        ln -s /var/app-persistent-storage/log /var/www/log && \
        ln -s /var/app-persistent-storage/uploads /var/www/html/uploads && \
        ln -s ../log/ /var/www/www/log '
-
+```
