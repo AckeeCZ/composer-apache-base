@@ -5,6 +5,7 @@ Usage:
 
 use this image as a base image for your php application
 
+Nette example:
 ```
 FROM ackee/composer-apache-base
 
