@@ -36,3 +36,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN a2enmod ldap && a2enmod authnz_ldap && \
     sed -i '14 a Options Indexes FollowSymLinks' /etc/apache2/sites-available/000-default.conf
 
+# install cron
+RUN apt-get update && \
+   DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    cron \
+   && rm -r /var/lib/apt/lists/*
